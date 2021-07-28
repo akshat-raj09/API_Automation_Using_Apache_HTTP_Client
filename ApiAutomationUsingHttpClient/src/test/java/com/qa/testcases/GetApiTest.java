@@ -12,6 +12,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -129,12 +130,12 @@ public class GetApiTest extends TestBase {
 		System.out.println("Response JSON from API ---> "+ responseJson);
 
 		// single value assertion:
-		// per_page:
+		// assert the value of per_page:
 		String perPageValue = TestUtil.getValueByJsonPath(responseJson, "/per_page");
 		System.out.println("value of per page is --> "+ perPageValue);
 		Assert.assertEquals(Integer.parseInt(perPageValue), 6);
 
-		// total:
+		// assert the value of total:
 		String totalValue = TestUtil.getValueByJsonPath(responseJson, "/total");
 		System.out.println("value of total is --> "+ totalValue);		
 		Assert.assertEquals(Integer.parseInt(totalValue), 12);
@@ -163,6 +164,19 @@ public class GetApiTest extends TestBase {
 		
 		System.out.println("Headers Array --> " + allHeaders);
 
+	}
+	
+	
+	@AfterMethod
+	public void tearDown() throws IOException {
+		
+		// Closes this stream and releases any system resources associated with it.
+		closebaleHttpResponse.close();
+		RestClient.closebaleHttpResponse.close();
+		
+		// Resets internal state of the request making it reusable.
+		RestClient.httpGet.reset();
+		
 	}
 
 }
