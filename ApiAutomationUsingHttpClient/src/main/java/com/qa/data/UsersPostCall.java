@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
-public class Users {
+public class UsersPostCall {
 
 	
 	String name = null;
@@ -14,11 +14,11 @@ public class Users {
 	String createdAt = null;
 
 
-	public Users() {
+	public UsersPostCall() {
 
 	}
 
-	public Users(String name, String job) {
+	public UsersPostCall(String name, String job) {
 		this.name = name;
 		this.job = job;
 	}

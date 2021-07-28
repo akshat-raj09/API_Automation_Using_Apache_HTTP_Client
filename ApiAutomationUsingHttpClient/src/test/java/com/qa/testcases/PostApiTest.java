@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.base.TestBase;
 import com.qa.client.RestClient;
-import com.qa.data.Users;
+import com.qa.data.UsersPostCall;
 
 
 public class PostApiTest extends TestBase {
@@ -58,10 +58,10 @@ public class PostApiTest extends TestBase {
 		ObjectMapper mapper = new ObjectMapper();
 		
 		// passing value to Users class constructor
-		Users users = new Users("morpheus", "leader");
+		UsersPostCall users = new UsersPostCall("Akshat", "Director");
 
 		// converting Java object to JSON file using jackson API:
-		String jsonFilePath = System.getProperty("user.dir") + "\\src\\main\\java\\com\\qa\\data\\users.json";
+		String jsonFilePath = System.getProperty("user.dir") + "\\src\\main\\java\\com\\qa\\data\\UsersPostCall.json";
 		mapper.writeValue(new File(jsonFilePath), users);
 
 		// converting Java object to JSON String jackson API:
@@ -85,7 +85,7 @@ public class PostApiTest extends TestBase {
 		System.out.println("The response from API is : "+ responseJson);
 
 		// converting JSON Response String to Java object using jackson API:
-		Users usersResponseObject = mapper.readValue(responseString, Users.class);
+		UsersPostCall usersResponseObject = mapper.readValue(responseString, UsersPostCall.class);
 
 		// compare the value passed to users class constructor to that of users object received value from JSON Response
 		Assert.assertTrue(users.getName().equals(usersResponseObject.getName()));

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcases.GetApiTest">
+      <class name="com.qa.testcases.PutApiTest">
         <methods>
-          <include name="getAPITestWithoutHeaders"/>
-          <include name="getAPITestWithHeaders"/>
           <include name="setUp"/>
+          <include name="postAPITest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.testcases.GetApiTest -->
+      </class> <!-- com.qa.testcases.PutApiTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
