@@ -23,6 +23,8 @@ The code for GET & POST Call is as follows:-
   cd API_Automation_Using_Apache_HTTP_Client
 ```
 
+- Open Eclipse/IntelliJ IDE. Import the project into Eclipse/IntelliJ IDE & search for [testng.xml](https://github.com/akshat-raj09/API_Automation_Using_Apache_HTTP_Client/blob/master/ApiAutomationUsingHttpClient/src/main/resources/testng.xml).
+
 - Right Click on [testng.xml](https://github.com/akshat-raj09/API_Automation_Using_Apache_HTTP_Client/blob/master/ApiAutomationUsingHttpClient/src/main/resources/testng.xml) ------> Run As ------> TestNG
 
 ## Contributing
