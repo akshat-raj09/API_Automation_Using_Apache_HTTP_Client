@@ -4,10 +4,10 @@
 
 This Maven Project contains example code for learning API Automation Testing using TestNG + Java with Apache HTTP Client Library.
 
-The code for GET & POST Call is as follows:-
+**The code for GET & POST Call is as follows :-**
 
-- HTTP GET Call ---------->> [Link](https://github.com/akshat-raj09/API_Automation_Using_Apache_HTTP_Client/blob/master/ApiAutomationUsingHttpClient/src/test/java/com/qa/testcases/GetApiTest.java)
-- HTTP POST Call ---------->> [Link](https://github.com/akshat-raj09/API_Automation_Using_Apache_HTTP_Client/blob/master/ApiAutomationUsingHttpClient/src/test/java/com/qa/testcases/PostApiTest.java)
+- ***HTTP GET Call*** ---------->> *[Link](https://github.com/akshat-raj09/API_Automation_Using_Apache_HTTP_Client/blob/master/ApiAutomationUsingHttpClient/src/test/java/com/qa/testcases/GetApiTest.java)*
+- ***HTTP POST Call*** ---------->> *[Link](https://github.com/akshat-raj09/API_Automation_Using_Apache_HTTP_Client/blob/master/ApiAutomationUsingHttpClient/src/test/java/com/qa/testcases/PostApiTest.java)*
 
 ## Run Locally
 
